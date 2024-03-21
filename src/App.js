@@ -42,7 +42,7 @@ function App() {
     <>
       <Header />
       {/* <Rosconnection rosUrl="ws://localhost:9090" rosDomainId="89"> */}
-      <Rosconnection rosUrl="ws://192.168.11.3:9090" rosDomainId="89" setRos={setRos} />
+      <Rosconnection rosUrl="ws://localhost:9090" rosDomainId="0" setRos={setRos} />
       {ros &&
         <>
         <Row>
@@ -59,11 +59,12 @@ function App() {
         </Row>
 
         <Row>
-          <Col>
+          
             <div className="d-flex justify-content-center align-items-center">
               <MapandOdom ros={ros} />
             </div>
-          </Col>
+          
+          
           <Col>
             <div className="d-flex justify-content-center align-items-center">
               <CameraData ros={ros} />
